@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     const name = req.query.name
     const age = req.query.age
-  res.json([name,age]);
+    res.sendFile(__dirname + '/index.html');
 });
 
 module.exports = router;
