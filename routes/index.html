@@ -14,6 +14,17 @@
       src="https://static.line-scdn.net/liff/edge/2/sdk.js"
     ></script>
     <script>
+        let express = require('express');
+        let app = express();
+        var router = express.Router();
+
+/* GET users listing. */
+router.get('/liff', function(req, res, next) {
+    const image= req.query.name
+    const name = req.query.age
+    const id = req.query.id
+    console.log("Your id is",id)
+});
       async function main() {
         await liff.init({ liffId: "1657099369-78y1D9eA" });
         await liff.shareTargetPicker([
@@ -21,7 +32,7 @@
   "type": "bubble",
   "hero": {
     "type": "image",
-    "url": "https://www.img.in.th/images/695b65f753ffe7a0083a93b3202db3f6.jpg",
+    "url": image,
     "size": "full",
     "aspectRatio": "20:21",
     "aspectMode": "cover",
@@ -36,7 +47,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "Brown Cafe",
+        "text": name,
         "weight": "bold",
         "size": "xl"
       },
