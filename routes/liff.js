@@ -6,9 +6,10 @@ router.get('/', function(req, res, next) {
     const name = req.query.name
     const age = req.query.age
     const id = req.query.id
-    console.log(id)
+    
 
     res.sendFile(__dirname + '/index.html');
+    res.send("your id is " + id )
 });
 
 module.exports = router;
