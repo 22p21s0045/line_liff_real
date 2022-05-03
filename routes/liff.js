@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     
 
     res.sendFile(__dirname + '/index.html');
-    res.send("your id is " + id )
+    
 });
 
 module.exports = router;
