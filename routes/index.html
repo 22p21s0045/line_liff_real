@@ -23,7 +23,8 @@ router.get('/liff', function(req, res, next) {
     const image= req.query.name
     const name = req.query.age
     const id = req.query.id
-    console.log("Your id is",id)
+    const state = req.query.liff.state
+    console.log("Your state is",state)
 });
       async function main() {
         await liff.init({ liffId: "1657099369-78y1D9eA" });
