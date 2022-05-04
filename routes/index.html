@@ -20,11 +20,12 @@
 
 /* GET users listing. */
 router.get('/liff', function(req, res, next) {
-    const image= req.query.name
-    const name = req.query.age
-    const id = req.query.id
-    const state = req.query.liff.state
-    console.log("Your state is",state)
+  const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
+  const params = new URLSearchParams(queryString);
+  const id = params.get('id');
+  
+    
+    console.log("Your ID is",id)
 });
       async function main() {
         await liff.init({ liffId: "1657099369-78y1D9eA" });
