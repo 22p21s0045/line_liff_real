@@ -17,7 +17,7 @@
       /* GET users listing. */
 
       const queryString = decodeURIComponent(window.location.search).replace(
-        "?liff.state=",
+        "/liff?liff.state=",
         ""
       );
       const params = new URLSearchParams(queryString);
@@ -113,7 +113,7 @@
         ]);
       }
       main();
-      console.log(liff.state);
+      
       liff.closeWindow();
     </script>
   </body>
