@@ -22,7 +22,7 @@
         ""
       );
       const params = new URLSearchParams(queryString);
-      const id = params.get("id");
+      const id = Number(params.get("id"));
 
       
       async function getData() {
