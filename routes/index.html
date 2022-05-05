@@ -13,6 +13,7 @@
       charset="utf-8"
       src="https://static.line-scdn.net/liff/edge/2/sdk.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       /* GET users listing. */
 
@@ -24,6 +25,12 @@
       const id = params.get("id");
 
       console.log("Your ID is", id);
+      async function getData() {
+        const response = await axios.get(
+          `https://sheetdb.io/api/v1/4f6zkkdkvc4yv`
+        );
+        console.log(response.data);
+      }
 
       async function main() {
         await liff.init({ liffId: "1657099369-78y1D9eA" });
