@@ -28,7 +28,7 @@
       
       async function getData() {
         const response = await axios.get(
-          `https://sheetdb.io/api/v1/4f6zkkdkvc4yv`
+          `https://sheetdb.io/api/v1/tibezmbrc1l3r`
         );
         console.log(response.data);
         return response.data;
@@ -37,8 +37,10 @@
 
       async function main() {
         await liff.init({ liffId: "1657099369-78y1D9eA" });
-        await liff.shareTargetPicker([
-          {
+        await liff.shareTargetPicker([{
+          type: "flex",
+          altText: "Flex Message",
+          contents:{
             type: "bubble",
             hero: {
               type: "image",
@@ -119,12 +121,15 @@
               ],
               flex: 0,
             },
-          },
+          }
+        }
+          ,
         ]);
+        liff.closeWindow();
       }
       main();
       
-      liff.closeWindow();
+      
     </script>
   </body>
 </html>
