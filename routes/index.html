@@ -41,13 +41,13 @@
             type: "bubble",
             hero: {
               type: "image",
-              url: `${image[id].image_link}`,
+              url: `${data[id].image_link}`,
               size: "full",
               aspectRatio: "20:21",
               aspectMode: "cover",
               action: {
                 type: "uri",
-                uri: `${image[id].image_link}`,
+                uri: `${data[id].image_link}`,
               },
             },
             body: {
@@ -56,7 +56,7 @@
               contents: [
                 {
                   type: "text",
-                  text: `${image[id].name}`,
+                  text: `${data[id].name}`,
                   weight: "bold",
                   size: "xl",
                 },
