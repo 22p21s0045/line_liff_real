@@ -38,6 +38,9 @@
       async function main() {
         await liff.init({ liffId: "1657099369-78y1D9eA" });
         await liff.shareTargetPicker([{
+          type: "flex",
+          altText: "Flex Message",
+          contents:{
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -120,8 +123,8 @@
   }
 }
           ,
-        ]);
-        liff.closeWindow();
+        }]);
+        
       }
       main();
       
