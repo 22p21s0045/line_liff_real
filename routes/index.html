@@ -32,11 +32,14 @@
 
         return response.data;
       }
-      const data = getData();
+      
+     
   
-      console.log("This is data 0", data);
+     
 
       async function main() {
+        const data = await getData();
+        console.log("This is data 1", data);
         await liff.init({ liffId: "1657099369-78y1D9eA" });
         await liff.shareTargetPicker([
           {
