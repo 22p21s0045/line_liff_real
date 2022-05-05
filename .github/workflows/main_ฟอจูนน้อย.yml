@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'ฟอจูนน้อย'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_439B5DA8FC3F44F59E0F9461DDBE486F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_55E12ACEC7144203B73DB399D2067E4C }}
           package: .
